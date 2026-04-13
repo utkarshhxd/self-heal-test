@@ -1,0 +1,19 @@
+name: "AI Self Heal"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  self-heal:
+    uses: utkarshhxd/P1/.github/workflows/reusable-self-heal.yml@main
+    with:
+      base-branch: main
+    secrets:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

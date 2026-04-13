@@ -1,5 +1,4 @@
 function hello() {
-  console.log("broken"
+  console.log("broken");
 }
-
 hello();
